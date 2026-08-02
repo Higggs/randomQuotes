@@ -1,7 +1,7 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 
-const api_url = "https://api.quotable.io/random";
+const api_url = "https://dummyjson.com/quotes/random";
 
 async function getQuote(url) {
     const response = await fetch(url);
@@ -9,7 +9,7 @@ async function getQuote(url) {
 
     console.log(data);
 
-    quote.innerHTML = data.content;
+    quote.innerHTML = data.quote;
     author.innerHTML = data.author;
 }
 
